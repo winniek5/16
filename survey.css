@@ -1,0 +1,165 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* Survey Header */
+.header {
+    background-color: #002147;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+/* Survey Banner */
+.banner {
+    width: 100%;
+    height: 300px;
+    background-image: url("survey-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-overlay h2 {
+    color: white;
+    font-size: 35px;
+}
+
+/* Progress Indicator */
+.progress-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 35px 20px;
+    background-color: white;
+}
+
+.step {
+    text-align: center;
+    color: #002147;
+}
+
+.step span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dddddd;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step.active span {
+    background-color: #D4AF37;
+    color: #002147;
+}
+
+.step.active p {
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+/* Respondent Details Form */
+.form-section {
+    width: 80%;
+    margin: 40px auto;
+}
+
+fieldset {
+    border: 2px solid #002147;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: white;
+}
+
+legend {
+    background-color: #002147;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group > label:first-child {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #002147;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 6px;
+}
+
+.form-group label {
+    margin-right: 15px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .banner-overlay h2 {
+        font-size: 25px;
+    }
+
+    .progress-section {
+        gap: 20px;
+    }
+
+    .form-section {
+        width: 95%;
+    }
+}
